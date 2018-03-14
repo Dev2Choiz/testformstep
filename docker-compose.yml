@@ -14,8 +14,6 @@ services:
       - "8080:80"
     volumes:
       - .:/var/www/html/formstep
-      - ./../packages:/var/www/html/packages
-      - ./docker/formstep/php_errors.log:/var/log/apache2/php_errors.log
     environment:
       CONTAINER_MYSQL_HOST: "container_mysql"
       CONTAINER_MYSQL_PORT: "3306"

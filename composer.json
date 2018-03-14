@@ -9,15 +9,11 @@
         },
         "files": [ "app/AppKernel.php" ]
     },
-
     "repositories": [
-      {
-        "type": "path",
-        "url": "../packages/FormStepBundle",
-        "options": {
-          "symlink": false
+        {
+            "type": "vcs",
+            "url": "https://github.com/dev2choiz/formstep"
         }
-      }
     ],
     "require": {
         "php": ">=5.3.9",

@@ -7,7 +7,7 @@ use Symfony\Component\HttpFoundation\File\UploadedFile;
 use Symfony\Component\Validator\Constraints as Assert;
 
 /**
- * Entite1
+ * Etape4
  *
  * @ORM\Table(name="etape4")
  * @ORM\Entity(repositoryClass="TestFormStepBundle\Repository\Etape4Repository")

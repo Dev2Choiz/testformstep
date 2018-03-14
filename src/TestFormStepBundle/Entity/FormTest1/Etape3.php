@@ -6,7 +6,7 @@ use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Validator\Constraints as Assert;
 
 /**
- * Entite1
+ * Etape3
  *
  * @ORM\Table(name="etape3")
  * @ORM\Entity(repositoryClass="TestFormStepBundle\Repository\Etape3Repository")

@@ -11,6 +11,7 @@
 /bin/
 /composer.phar
 /composer.lock
-!docker/formstep/php_errors.log
 /.idea
 /.idea/*
+/docker/jsinsert/php_errors.log
+/composer.lock

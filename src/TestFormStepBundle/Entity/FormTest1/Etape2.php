@@ -5,7 +5,7 @@ namespace TestFormStepBundle\Entity\FormTest1;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * Entite1
+ * Etape2
  *
  * @ORM\Table(name="etape2")
  * @ORM\Entity(repositoryClass="TestFormStepBundle\Repository\Etape2Repository")

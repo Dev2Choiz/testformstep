@@ -6,7 +6,7 @@ use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * Entite1
+ * Etape3A
  *
  * @ORM\Table(name="etape3a")
  * @ORM\Entity(repositoryClass="TestFormStepBundle\Repository\Etape3ARepository")

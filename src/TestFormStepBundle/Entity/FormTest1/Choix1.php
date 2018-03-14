@@ -2,18 +2,16 @@
 
 namespace TestFormStepBundle\Entity\FormTest1;
 
-use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * Entite1
+ * Choix1
  *
  * @ORM\Table(name="choix1")
  * @ORM\Entity(repositoryClass="TestFormStepBundle\Repository\Choix1Repository")
  */
 class Choix1
 {
-
 
     /**
      * @var string
@@ -22,7 +20,6 @@ class Choix1
      * @ORM\Column(name="codeChoix", type="string", length=255, unique=true)
      */
     private $codeChoix;
-
 
     /**
      * @var string

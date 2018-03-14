@@ -2,11 +2,10 @@
 
 namespace TestFormStepBundle\Entity\FormTest1;
 
-use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * Entite1
+ * Etape1
  *
  * @ORM\Table(name="etape1")
  * @ORM\Entity(repositoryClass="TestFormStepBundle\Repository\Etape1Repository")

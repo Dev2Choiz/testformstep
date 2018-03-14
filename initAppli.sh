@@ -6,14 +6,13 @@ docker-compose exec  --user formstep container_formstep bash -c 'export PHP_IDE_
 
 echo "SUPRESSION VENDOR CACHE COMPOSER.LOCK"
 docker-compose exec --user formstep container_formstep bash -c 'php -v'
-#docker-compose exec --user formstep container_formstep bash -c 'rm -rf /var/www/html/formstep/composer.lock'
-#docker-compose exec --user formstep container_formstep bash -c 'rm -rf /var/www/html/formstep/vendor'
-docker-compose exec --user formstep container_formstep bash -c 'rm -rf /var/www/html/formstep/var/cache'
-docker-compose exec --user formstep container_formstep bash -c 'rm -rf /var/www/html/formstep/var/logs'
-docker-compose exec --user formstep container_formstep bash -c 'rm -rf /var/www/html/formstep/var/sessions'
+docker-compose exec --user formstep container_formstep bash -c 'rm -rf /var/www/html/formstep/composer.lock'
+docker-compose exec --user formstep container_formstep bash -c 'rm -rf /var/www/html/formstep/vendor'
+docker-compose exec --user formstep container_formstep bash -c 'rm -rf /var/www/html/formstep/app/cache'
+docker-compose exec --user formstep container_formstep bash -c 'rm -rf /var/www/html/formstep/app/logs'
 
 echo "COMPOSER INSTALL"
-#docker-compose exec  --user formstep container_formstep bash -c '/usr/local/bin/composer install'
+docker-compose exec  --user formstep container_formstep bash -c '/usr/local/bin/composer install'
 
 #echo "DOCTRINE : CREATE DB"
 docker-compose exec  --user formstep container_formstep bash -c 'php /var/www/html/formstep/app/console doctrine:database:create'
