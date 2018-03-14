@@ -1,0 +1,19 @@
+services:
+
+    test_form_step.listener.formtestmetadatalistener:
+        class: TestFormStepBundle\Listener\FormTestListener
+        tags:
+            - { name: kernel.event_listener, event: 'formstep.preSetData.formtest1.etape2',       method: 'etape2preSetData'       }
+            - { name: kernel.event_listener, event: 'formstep.preSetData.formtest1.etape3',       method: 'etape3PreSetData'       }
+            - { name: kernel.event_listener, event: 'formstep.prePreviousStep.formtest1.etape3',  method: 'etape3PrePreviousStep'  }
+            - { name: kernel.event_listener, event: 'formstep.preNextStep.formtest1.etape3',      method: 'etape3PreNextStep'      }
+            - { name: kernel.event_listener, event: 'formstep.prePreviousStep.formtest1.etape3A', method: 'etape3XPrePreviousStep' }
+            - { name: kernel.event_listener, event: 'formstep.prePreviousStep.formtest1.etape3B', method: 'etape3XPrePreviousStep' }
+            - { name: kernel.event_listener, event: 'formstep.prePreviousStep.formtest1.etape3C', method: 'etape3XPrePreviousStep' }
+            - { name: kernel.event_listener, event: 'formstep.preNextStep.formtest1.etape3A',     method: 'etape3XPreNextStep'     }
+            - { name: kernel.event_listener, event: 'formstep.preNextStep.formtest1.etape3B',     method: 'etape3XPreNextStep'     }
+            - { name: kernel.event_listener, event: 'formstep.preNextStep.formtest1.etape3C',     method: 'etape3XPreNextStep'     }
+            - { name: kernel.event_listener, event: 'formstep.prePreviousStep.formtest1.etape4',  method: 'etape4PrePreviousStep'  }
+            - { name: kernel.event_listener, event: 'formstep.preNextStep.formtest1.etape4',      method: 'etape4PreNextStep'      }
+            - { name: kernel.event_listener, event: 'formstep.preSetData.formtest1.etape4',       method: 'etape4preSetData'       }
+

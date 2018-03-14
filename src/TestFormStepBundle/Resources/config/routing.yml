@@ -1,0 +1,7 @@
+test_form_step:
+    resource: "@TestFormStepBundle/Controller/StepController.php"
+    type:     annotation
+
+test_form_step_formulaire:
+    path:     /
+    defaults: { _controller: TestFormStepBundle:Step:formulaire }

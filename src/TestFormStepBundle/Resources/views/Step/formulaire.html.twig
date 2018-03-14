@@ -1,0 +1,48 @@
+{% extends "TestFormStepBundle::layout.html.twig" %}
+
+{% block title %}Index{% endblock %}
+{% block stylesheets %}
+    {{ parent() }}
+    {% stylesheets '@TestFormStepBundle/Resources/public/css/Step/formulaire.css' %}
+    <link rel="stylesheet" href="{{ asset_url }}" />
+    {% endstylesheets %}
+{% endblock %}
+
+{% block content %}
+    <h1>FOO</h1>
+    <div class="formStepStyle">
+        <form action="" id="formStep">
+            <div id="formStepContent"></div>
+            <div class="row">
+                <div class="col-md-offset-3 col-md-3">
+                    <input type="submit" data-target="previous" value="Precedent" class="btn btn-primary" />
+                </div>
+                <div class="col-md-offset-1 col-md-3">
+                    <input type="submit" data-target="next" value="Suivant" class="btn btn-primary" />
+                </div>
+            </div>
+        </form>
+
+        <div class="text-center">
+            <a class="btn btn-link" data-toggle="collapse" href="#collapsePreview" aria-expanded="false" aria-controls="collapsePreview">Aperçu</a>
+        </div>
+        <div class="collapse" id="collapsePreview">
+            <div class="card card-body contentPreview">
+                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+            </div>
+        </div>
+
+    </div>
+
+{% endblock %}
+
+{% block variableJs %}
+    {{ parent() }}
+    <script>
+        var formulaire_url = "{{ path('test_form_step_step_noParam') }}/";
+        var formulaire_listStep = [{% for step in listStep %}"{{ step }}", {% endfor %}];
+        var formulaire_offset = "{{ offset }}";
+        var formulaire_currentStep = formulaire_listStep[formulaire_offset];
+
+    </script>
+{% endblock %}

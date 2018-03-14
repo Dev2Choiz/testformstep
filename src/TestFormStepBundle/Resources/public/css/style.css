@@ -1,0 +1,29 @@
+.hiddenForm {
+    display: none;
+}
+
+.center {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+h1 {
+    font-size: 27px;
+    color: #313131;
+    text-align: center;
+}
+
+h2 {
+    font-size: 19px;
+    color: #313155;
+    text-align: center;
+}
+
+.row [class^="col-"] {
+    padding: 0 !important;
+    margin-bottom: 15px;
+}
+.row {
+    margin: 0;
+    padding: 0;
+}

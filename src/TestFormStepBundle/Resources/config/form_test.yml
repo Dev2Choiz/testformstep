@@ -1,0 +1,99 @@
+form_step:
+    forms:
+        formtest1:
+            name: formtest1
+            entities:
+                etape1:
+                    entity: TestFormStepBundle\Entity\FormTest1\Etape1
+                    property: etape1
+                etape2:
+                    entity: TestFormStepBundle\Entity\FormTest1\Etape2
+                    property: etape2
+                etape3:
+                    entity: TestFormStepBundle\Entity\FormTest1\Etape3
+                    property: etape3
+                etape3A:
+                    entity: TestFormStepBundle\Entity\FormTest1\Etape3A
+                    property: etape3A
+                etape3B:
+                    entity: TestFormStepBundle\Entity\FormTest1\Etape3B
+                    property: etape3B
+                etape3C:
+                    entity: TestFormStepBundle\Entity\FormTest1\Etape3C
+                    property: etape3C
+                etape4:
+                    entity: TestFormStepBundle\Entity\FormTest1\Etape4
+                    property: etape4
+
+            steps:
+
+                etape1:
+                    type: propertyEntity
+                    fields:
+                        etape1_champText1:
+                            formtype: TestFormStepBundle\Form\FormTest1\Etape1Type
+                            entity: etape1
+                            property: champText1
+                        etape1_champText2:
+                            formtype: TestFormStepBundle\Form\FormTest1\Etape1Type
+                            entity: etape1
+                            property: champText2
+                etape2:
+                    type: propertyEntity
+                    fields:
+                        etape2_champText1:
+                            formtype: TestFormStepBundle\Form\FormTest1\Etape2Type
+                            entity: etape2
+                            property: champText1
+                        etape2_champText2:
+                            formtype: TestFormStepBundle\Form\FormTest1\Etape2Type
+                            entity: etape2
+                            property: champText2
+                        etape2_finForm:
+                            formtype: TestFormStepBundle\Form\FormTest1\Etape2Type
+                            entity: etape2
+                            property: finForm
+
+                etape3:
+                    type: formtype
+                    fields:
+                        etape3_choix1:
+                            formtype: TestFormStepBundle\Form\FormTest1\Etape3Type
+                            entity: etape3
+                            entityProperties:
+                                - choix1
+
+
+                etape3A:
+                    type: propertyEntity
+                    fields:
+                        etape3A_champText1:
+                            formtype: TestFormStepBundle\Form\FormTest1\Etape3AType
+                            entity: etape3A
+                            property: value
+
+                etape3B:
+                    type: propertyEntity
+                    fields:
+                        etape3B_champText1:
+                            formtype: TestFormStepBundle\Form\FormTest1\Etape3BType
+                            entity: etape3B
+                            property: value
+
+                etape3C:
+                    type: propertyEntity
+                    fields:
+                        etape3C_champText1:
+                            formtype: TestFormStepBundle\Form\FormTest1\Etape3CType
+                            entity: etape3C
+                            property: value
+                etape4:
+                    type: formtype
+                    finalStep: true
+                    fields:
+                        etape4_choix1:
+                            formtype: TestFormStepBundle\Form\FormTest1\Etape4Type
+                            entity: etape4
+                            entityProperties:
+                                - choix
+                                - file

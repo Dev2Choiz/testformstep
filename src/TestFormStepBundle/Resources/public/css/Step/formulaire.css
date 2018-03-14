@@ -1,0 +1,18 @@
+.formStepStyle {
+    border: 1px solid #31708f;
+    width: 700px;
+    margin: 0 auto;
+    padding: 15px;
+}
+
+#collapsPreview {
+    border: 1px solid #3366cc;
+}
+
+.formImprique [class^="col-"] {
+    margin-bottom: 2px;
+}
+.formImprique [class^="col-"] input, .formImprique [class^="col-"] select, .formImprique [class^="col-"] label {
+    width: auto;
+    height: auto;
+}

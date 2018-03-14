@@ -1,0 +1,39 @@
+[19-Feb-2018 03:00:00 UTC] PHP Fatal error:  Uncaught InvalidArgumentException: Unable to generate a logout url for an anonymous token. in /var/www/html/encrypt/vendor/symfony/symfony/src/Symfony/Component/Security/Http/Logout/LogoutUrlGenerator.php:165
+Stack trace:
+#0 /var/www/html/encrypt/vendor/symfony/symfony/src/Symfony/Component/Security/Http/Logout/LogoutUrlGenerator.php(112): Symfony\Component\Security\Http\Logout\LogoutUrlGenerator->getListener(NULL)
+#1 /var/www/html/encrypt/vendor/symfony/symfony/src/Symfony/Component/Security/Http/Logout/LogoutUrlGenerator.php(78): Symfony\Component\Security\Http\Logout\LogoutUrlGenerator->generateLogoutUrl(NULL, 1)
+#2 /var/www/html/encrypt/vendor/symfony/symfony/src/Symfony/Bundle/SecurityBundle/DataCollector/SecurityDataCollector.php(116): Symfony\Component\Security\Http\Logout\LogoutUrlGenerator->getLogoutPath()
+#3 /var/www/html/encrypt/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Profiler/Profiler.php(165): Symfony\Bundle\SecurityBundle\DataCollector\SecurityDataCollector->collect(Object(Symfon in /var/www/html/encrypt/vendor/symfony/symfony/src/Symfony/Component/Security/Http/Logout/LogoutUrlGenerator.php on line 165
+[19-Feb-2018 03:00:00 UTC] PHP Stack trace:
+[19-Feb-2018 03:00:00 UTC] PHP   1. {main}() /var/www/html/encrypt/web/app_dev.php:0
+[19-Feb-2018 03:00:00 UTC] PHP   2. AppKernel->handle($request = *uninitialized*, $type = *uninitialized*, $catch = *uninitialized*) /var/www/html/encrypt/web/app_dev.php:14
+[19-Feb-2018 03:00:00 UTC] PHP   3. Symfony\Component\HttpKernel\HttpKernel->handle($request = *uninitialized*, $type = *uninitialized*, $catch = *uninitialized*) /var/www/html/encrypt/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php:202
+[19-Feb-2018 03:00:00 UTC] PHP   4. Symfony\Component\HttpKernel\HttpKernel->handleRaw($request = *uninitialized*, $type = *uninitialized*) /var/www/html/encrypt/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/HttpKernel.php:68
+[19-Feb-2018 03:00:00 UTC] PHP   5. Symfony\Component\HttpKernel\HttpKernel->filterResponse($response = *uninitialized*, $request = *uninitialized*, $type = *uninitialized*) /var/www/html/encrypt/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/HttpKernel.php:173
+[19-Feb-2018 03:00:00 UTC] PHP   6. Symfony\Component\HttpKernel\Debug\TraceableEventDispatcher->dispatch($eventName = *uninitialized*, $event = *uninitialized*) /var/www/html/encrypt/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/HttpKernel.php:191
+[19-Feb-2018 03:00:00 UTC] PHP   7. Symfony\Component\EventDispatcher\ContainerAwareEventDispatcher->dispatch($eventName = *uninitialized*, $event = *uninitialized*) /var/www/html/encrypt/vendor/symfony/symfony/src/Symfony/Component/EventDispatcher/Debug/TraceableEventDispatcher.php:139
+[19-Feb-2018 03:00:00 UTC] PHP   8. Symfony\Component\EventDispatcher\ContainerAwareEventDispatcher->doDispatch($listeners = *uninitialized*, $eventName = *uninitialized*, $event = *uninitialized*) /var/www/html/encrypt/vendor/symfony/symfony/src/Symfony/Component/EventDispatcher/EventDispatcher.php:44
+[19-Feb-2018 03:00:00 UTC] PHP   9. Symfony\Component\EventDispatcher\Debug\WrappedListener->__invoke($event = *uninitialized*, $eventName = *uninitialized*, $dispatcher = *uninitialized*) /var/www/html/encrypt/vendor/symfony/symfony/src/Symfony/Component/EventDispatcher/EventDispatcher.php:212
+[19-Feb-2018 03:00:00 UTC] PHP  10. call_user_func:{/var/www/html/encrypt/vendor/symfony/symfony/src/Symfony/Component/EventDispatcher/Debug/WrappedListener.php:104}(*uninitialized*, *uninitialized*, *uninitialized*, *uninitialized*) /var/www/html/encrypt/vendor/symfony/symfony/src/Symfony/Component/EventDispatcher/Debug/WrappedListener.php:104
+[19-Feb-2018 03:00:00 UTC] PHP  11. Symfony\Component\HttpKernel\EventListener\ProfilerListener->onKernelResponse($event = *uninitialized*, *uninitialized*, *uninitialized*) /var/www/html/encrypt/vendor/symfony/symfony/src/Symfony/Component/EventDispatcher/Debug/WrappedListener.php:104
+[19-Feb-2018 03:00:00 UTC] PHP  12. Symfony\Component\HttpKernel\Profiler\Profiler->collect($request = *uninitialized*, $response = *uninitialized*, $exception = *uninitialized*) /var/www/html/encrypt/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/EventListener/ProfilerListener.php:91
+[19-Feb-2018 03:00:00 UTC] PHP  13. Symfony\Bundle\SecurityBundle\DataCollector\SecurityDataCollector->collect($request = *uninitialized*, $response = *uninitialized*, $exception = *uninitialized*) /var/www/html/encrypt/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Profiler/Profiler.php:165
+[19-Feb-2018 03:00:00 UTC] PHP  14. Symfony\Component\Security\Http\Logout\LogoutUrlGenerator->getLogoutPath($key = *uninitialized*) /var/www/html/encrypt/vendor/symfony/symfony/src/Symfony/Bundle/SecurityBundle/DataCollector/SecurityDataCollector.php:116
+[19-Feb-2018 03:00:00 UTC] PHP  15. Symfony\Component\Security\Http\Logout\LogoutUrlGenerator->generateLogoutUrl($key = *uninitialized*, $referenceType = *uninitialized*) /var/www/html/encrypt/vendor/symfony/symfony/src/Symfony/Component/Security/Http/Logout/LogoutUrlGenerator.php:78
+[19-Feb-2018 03:00:00 UTC] PHP  16. Symfony\Component\Security\Http\Logout\LogoutUrlGenerator->getListener($key = *uninitialized*) /var/www/html/encrypt/vendor/symfony/symfony/src/Symfony/Component/Security/Http/Logout/LogoutUrlGenerator.php:112
+[20-Feb-2018 13:29:22 UTC] PHP Warning:  require(/var/www/html/formstep/app/../vendor/autoload.php): failed to open stream: No such file or directory in /var/www/html/formstep/app/autoload.php on line 11
+[20-Feb-2018 13:29:22 UTC] PHP Stack trace:
+[20-Feb-2018 13:29:22 UTC] PHP   1. {main}() /var/www/html/formstep/web/app_dev.php:0
+[20-Feb-2018 13:29:22 UTC] PHP   2. require() /var/www/html/formstep/web/app_dev.php:24
+[20-Feb-2018 13:29:22 UTC] PHP Fatal error:  require(): Failed opening required '/var/www/html/formstep/app/../vendor/autoload.php' (include_path='.:/usr/local/lib/php') in /var/www/html/formstep/app/autoload.php on line 11
+[20-Feb-2018 13:29:22 UTC] PHP Stack trace:
+[20-Feb-2018 13:29:22 UTC] PHP   1. {main}() /var/www/html/formstep/web/app_dev.php:0
+[20-Feb-2018 13:29:22 UTC] PHP   2. require() /var/www/html/formstep/web/app_dev.php:24
+[20-Feb-2018 13:44:15 UTC] PHP Warning:  require(/var/www/html/formstep/app/../vendor/autoload.php): failed to open stream: No such file or directory in /var/www/html/formstep/app/autoload.php on line 11
+[20-Feb-2018 13:44:15 UTC] PHP Stack trace:
+[20-Feb-2018 13:44:15 UTC] PHP   1. {main}() /var/www/html/formstep/web/app_dev.php:0
+[20-Feb-2018 13:44:15 UTC] PHP   2. require() /var/www/html/formstep/web/app_dev.php:24
+[20-Feb-2018 13:44:15 UTC] PHP Fatal error:  require(): Failed opening required '/var/www/html/formstep/app/../vendor/autoload.php' (include_path='.:/usr/local/lib/php') in /var/www/html/formstep/app/autoload.php on line 11
+[20-Feb-2018 13:44:15 UTC] PHP Stack trace:
+[20-Feb-2018 13:44:15 UTC] PHP   1. {main}() /var/www/html/formstep/web/app_dev.php:0
+[20-Feb-2018 13:44:15 UTC] PHP   2. require() /var/www/html/formstep/web/app_dev.php:24

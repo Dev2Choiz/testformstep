@@ -1,0 +1,41 @@
+
+{% if field.vars.compound %}
+    {#<div class="form-group formImprique">#}
+    <div class="form-group formImprique">
+        {% for subField in field %}
+            <div class="row">
+                {% if subField.vars.errors is not empty %}
+                    <div class="alert alert-danger">
+                        {% for error in subField.vars.errors %}
+                            {{ error.message }}
+                        {% endfor %}
+                    </div>
+                {% endif %}
+                <label for="{{ subField.vars.id }}" class="col-md-3 col-form-label">
+                    {{ subField.vars.label }}
+                </label>
+                <div class="col-md-9 text-left">
+                    {{ form_widget(subField, { 'attr' : { 'class' : 'form-control' }} ) }}
+                    {#{{ form_widget(subField) }}#}
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+{% else %}
+    {#<div class="form-group row">#}
+    <div class="row">
+        {% if field.vars.errors is not empty %}
+            <div class="alert alert-danger">
+                {% for error in field.vars.errors %}
+                    {{ error.message }}
+                {% endfor %}
+            </div>
+        {% endif %}
+        <label for="{{ field.vars.id }}" class="col-md-3 col-form-label">
+            {{ field.vars.label }}
+        </label>
+        <div class="col-md-9">
+            {{ form_widget(field, { 'attr' : { 'class' : 'form-control' }} ) }}
+        </div>
+    </div>
+{% endif %}

@@ -1,0 +1,38 @@
+<div class="panel panel-default panel-primary">
+    <div class="panel-heading">
+        <h3 class="panel-title text-center">
+            {{ currentStep }}
+        </h3>
+    </div>
+    <div class="panel-body">
+
+        {% for fields in form %}
+            {% if fields.vars.attr.formstep is defined %}
+                {# Il faut afficher les Forms Dans le Form "field" #}
+                {% for field in fields %}
+                    {% set params = fields.vars.attr.formstep[field.vars.name] %}
+                    {% if params["active"] %}
+
+
+                        {{ include('@TestFormStep/Step/partial/field.html.twig', {
+                            'field': field,
+                            'fields': fields,
+                            'form': form
+                        }) }}
+
+
+                    {% else %}
+                        <div style="display:none;">
+                            {{ form_row(field) }}
+                        </div>
+                    {% endif %}
+                {% endfor %}
+            {% endif %}
+        {% endfor %}
+        {{ form_widget(form._token) }}
+        <div class="hidden">
+            {{ form_widget(form.formStepData) }}
+        </div>
+    </div>
+</div>
+

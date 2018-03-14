@@ -1,0 +1,7 @@
+form_step:
+    resource: "@FormStepBundle/Resources/config/routing.yml"
+    prefix:   /
+
+test_form_test:
+    resource: "@TestFormStepBundle/Resources/config/routing.yml"
+    prefix:   /
